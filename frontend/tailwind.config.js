@@ -8,7 +8,7 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				'hero-pattern': "url('/src/assets/svg/auth-background-one.svg')",
+				'hero-header': "url('src/assets/png/hero-image.png')",
 			},
 			transitionProperty: {
 				width: 'width',
@@ -21,10 +21,15 @@ module.exports = {
 			body: ['IBM Plex Mono', 'Open Sans'],
 			newRocker: ['New Rocker'],
 			ibmPlexMono: ['IBM Plex Mono'],
+			ibmPlexMonoBold: ['IBM Plex Mono Bold'],
+			ibmPlexMonoThin: ['IBM Plex Mono Thin'],
+			ibmPlexMonoLight: ['IBM Plex Mono Light'],
 		},
 		colors: {
 			white: '#fff',
 			black: '#000',
+			eerieBlack: '#15191F',
+			translucent: 'rgba(255,255,255,0.15);',
 		},
 		screens: {
 			sm: '640px',
