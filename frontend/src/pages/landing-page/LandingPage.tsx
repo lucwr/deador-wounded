@@ -1,16 +1,23 @@
 import React from 'react'
 import Header from './components/header/Header'
 import RestoreOrder from './components/restore-order/RestoreOrder'
-import UncoverSouls from './components/uncover-souls/UncoverSouls'
+import EmblemContent from '../../components/emblem-content/EmblemContent'
 import WhatIsDOW from './components/what-is-dow/WhatIsDOW'
+import BuiltOnPolygon from './components/built-on-polygon/BuiltOnPolygon'
 
 function LandingPage(): JSX.Element {
 	return (
 		<main>
 			<Header />
-			<RestoreOrder />
+			<RestoreOrder className='aspect-video' />
 			<WhatIsDOW />
-			<UncoverSouls />
+			<EmblemContent
+				header='Uncover the lost souls of the dead amongst the living'
+				body='Reap as many souls from each harvest and build your collection of Souls'
+				className=''
+			/>
+			<RestoreOrder className='object-contain max-h-[70vh]' variant='ship' />
+			<BuiltOnPolygon />
 		</main>
 	)
 }

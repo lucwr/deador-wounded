@@ -1,16 +1,25 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import reaper from 'assets/png/reaper-and-horse.png'
+import reaperShip from 'assets/png/reaper-ship.png'
 
-function RestoreOrder(): JSX.Element {
+interface Props {
+	variant?: 'ship'
+	className: string
+}
+function RestoreOrder({ variant, className }: Props): JSX.Element {
 	return (
 		<section
 			className='maxWidth'
 			// style={{ backgroundImage: `url(${reaper})` }}
 		>
-			<div className='bg-image min-h-screen flex-center-center'>
+			<div className='bg-image h-screen flex-center-center'>
 				<div className='bg-image basis-[50%]'>
-					<img src={reaper} alt='reaper with horse' />
+					<img
+						src={variant === 'ship' ? reaperShip : reaper}
+						alt='reaper'
+						className={className}
+					/>
 				</div>
 				<div className='basis-[50%] pr-20'>
 					<h2 className='text-4xl mb-8 w-[80%]'>
