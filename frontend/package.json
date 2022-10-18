@@ -1,63 +1,64 @@
 {
-    "name": "dead-or-wounded-frontend",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "@testing-library/jest-dom": "^5.14.1",
-        "@testing-library/react": "^13.0.0",
-        "@testing-library/user-event": "^13.2.1",
-        "@types/jest": "^27.0.1",
-        "@types/node": "^16.7.13",
-        "@types/react": "^18.0.0",
-        "@types/react-dom": "^18.0.0",
-        "eslint-plugin-prettier": "^4.2.1",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-scripts": "5.0.1",
-        "typescript": "*",
-        "web-vitals": "^2.1.0"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
-        "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
-        "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
-    "devDependencies": {
-        "@testing-library/react": "^13.4.0",
-        "@types/react-test-renderer": "^18.0.0",
-        "@typescript-eslint/eslint-plugin": "^5.0.0",
-        "eslint": "^8.24.0",
-        "eslint-config-prettier": "^8.5.0",
-        "eslint-config-standard-with-typescript": "^23.0.0",
-        "eslint-plugin-import": "^2.25.2",
-        "eslint-plugin-n": "^15.0.0",
-        "eslint-plugin-promise": "^6.0.0",
-        "eslint-plugin-react": "^7.31.8",
-        "prettier": "2.7.1",
-        "react-test-renderer": "^18.2.0",
-        "tailwindcss": "^3.1.8",
-        "tsconfig-paths-webpack-plugin": "^4.0.0"
-    }
+	"name": "dead-or-wounded-frontend",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@testing-library/jest-dom": "^5.14.1",
+		"@testing-library/react": "^13.0.0",
+		"@testing-library/user-event": "^13.2.1",
+		"@types/jest": "^27.0.1",
+		"@types/node": "^16.7.13",
+		"@types/react": "^18.0.0",
+		"@types/react-dom": "^18.0.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-scripts": "5.0.1",
+		"typescript": "*",
+		"web-vitals": "^2.1.0",
+		"tailwind-scrollbar-hide": "^1.1.7"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
+		"lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
+		"format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"@testing-library/react": "^13.4.0",
+		"@types/react-test-renderer": "^18.0.0",
+		"@typescript-eslint/eslint-plugin": "^5.0.0",
+		"eslint": "^8.24.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-config-standard-with-typescript": "^23.0.0",
+		"eslint-plugin-import": "^2.25.2",
+		"eslint-plugin-n": "^15.0.0",
+		"eslint-plugin-promise": "^6.0.0",
+		"eslint-plugin-react": "^7.31.8",
+		"prettier": "2.7.1",
+		"react-test-renderer": "^18.2.0",
+		"tailwindcss": "^3.1.8",
+		"tsconfig-paths-webpack-plugin": "^4.0.0"
+	}
 }

@@ -2,14 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-		'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+@font-face {
+	font-family: 'New Rocker';
+	src: local('NewRocker'), url('../public/fonts/NewRockerRegular.otf') format('opentype');
 }
 
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+@font-face {
+	font-family: 'IBM Plex Mono';
+	src: local('IBMPlexMono'), url('../public/fonts/IBMPlexMonoRegular.ttf') format('truetype');
 }
