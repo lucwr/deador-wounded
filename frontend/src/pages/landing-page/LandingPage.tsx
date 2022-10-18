@@ -1,4 +1,5 @@
 import React from 'react'
+import { Footer } from 'components'
 import Header from './components/header/Header'
 import RestoreOrder from './components/restore-order/RestoreOrder'
 import EmblemContent from '../../components/emblem-content/EmblemContent'
@@ -18,6 +19,8 @@ function LandingPage(): JSX.Element {
 			/>
 			<RestoreOrder className='object-contain max-h-[70vh]' variant='ship' />
 			<BuiltOnPolygon />
+			<RestoreOrder className='object-contain max-h-[70vh]' variant='folklore' />
+			<Footer />
 		</main>
 	)
 }

@@ -1,12 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import instagramIcon from 'assets/svg/instagram-icon.svg'
-import discordIcon from 'assets/svg/discord-icon.svg'
-import linkedinIcon from 'assets/svg/linkedin-icon.svg'
-import twitterIcon from 'assets/svg/twitter-icon.svg'
 import ruby from 'assets/png/ruby.png'
-
-const socialMediaIcons = [instagramIcon, discordIcon, linkedinIcon, twitterIcon]
+import { SocialLinks } from 'components'
 
 function Navbar(): JSX.Element {
 	return (
@@ -17,11 +12,7 @@ function Navbar(): JSX.Element {
 				</Link>
 				<div className='flex-center-end gap-x-16'>
 					<div className='flex-center-center gap-x-4'>
-						{socialMediaIcons.map(icon => (
-							<button key={icon} className='w-8'>
-								<img src={icon} alt={icon} className='aspect-square' />
-							</button>
-						))}
+						<SocialLinks />
 					</div>
 
 					<Link to='/signin' className='font-black flex-center-between gap-x-2'>

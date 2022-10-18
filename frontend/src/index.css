@@ -131,6 +131,10 @@ button {
 	.bg-image-hero {
 		@apply bg-cover bg-bottom bg-no-repeat;
 	}
+	.bg-image-footer {
+		@apply bg-cover bg-top bg-no-repeat;
+		/* background: linear-gradient(0deg, #2c6cae 0%, #2d347d 55.17%, #2e0452 100%); */
+	}
 
 	.flex-start-start {
 		@apply flex items-start justify-start;

@@ -1,7 +1,7 @@
 import React from 'react'
 import bgImage from 'assets/png/portal-background.png'
-import dowLogo from 'assets/png/logo.png'
 import textFrame from 'assets/png/text-frame-1.png'
+import { DOWLogo } from 'components'
 
 function WhatIsDOW(): JSX.Element {
 	return (
@@ -14,7 +14,9 @@ function WhatIsDOW(): JSX.Element {
 				// style={{ backgroundImage: `url(${textFrame})` }}
 			>
 				<img src={textFrame} alt='text frame' className='absolute inset-0 ' />
-				<img src={dowLogo} alt='logo' className='w-28 aspect-square my-4 relative z-[1]' />
+				<div className='w-28 my-4 relative z-[1]'>
+					<DOWLogo />
+				</div>
 
 				<h2 className='text-4xl mb-4 relative z-[1]'>What is Dead or Wounded?</h2>
 				<div className='relative z-[1] text-center'>
