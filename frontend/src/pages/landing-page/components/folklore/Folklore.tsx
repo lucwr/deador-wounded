@@ -1,13 +1,18 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import textFrame from 'assets/png/text-frame-2.png'
 import scroll from 'assets/png/scroll.png'
 import coin from 'assets/png/coin.png'
 
 function Folklore(): JSX.Element {
 	return (
-		<div
-			className='relative flex-center-start gap-y-8 flex-col rounded-lg my-auto w-full max-w-[25rem] h-[60%] px-6 py-8 '
+		<motion.div
+			className='relative border border-translucent flex-center-start gap-y-8 flex-col rounded-lg my-auto w-full max-w-[25rem] h-[30rem] px-6 py-8 '
 			// style={{ backgroundImage: `url(${textFrame})` }}
+			initial={{ opacity: 0, x: -100 }}
+			whileInView={{ opacity: 1, x: 0 }}
+			viewport={{ once: true, amount: 0.25 }}
+			transition={{ duration: 1, ease: 'easeOut' }}
 		>
 			<img src={textFrame} alt='text frame' className='absolute inset-0 ' />
 			<h3 className='text-2xl mb-4 relative z-[1] text-center'>
@@ -26,7 +31,7 @@ function Folklore(): JSX.Element {
 					<p>Free DOW to Start</p>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	)
 }
 

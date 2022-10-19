@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
+import { motion } from 'framer-motion'
 import polygon from 'assets/png/polygon.png'
 import { EmblemContent } from 'components'
 
@@ -18,9 +19,19 @@ function BuiltOnPolygon(): JSX.Element {
 						width='full'
 					/>
 				</div>
-				<div className='bg-image basis-[50%] '>
-					<img src={polygon} alt='reaper' className='object-contain max-h-[70vh]' />
-				</div>
+				<motion.div
+					className='bg-image basis-[50%] '
+					initial={{ opacity: 0, x: 100 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					viewport={{ once: true, amount: 0.25 }}
+					transition={{ duration: 1, ease: 'easeOut' }}
+				>
+					<img
+						src={polygon}
+						alt='polygon emblem'
+						className='object-contain max-h-[70vh]'
+					/>
+				</motion.div>
 			</div>
 		</section>
 	)

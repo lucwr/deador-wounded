@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import { Emblem } from 'components'
 
 interface Props {
@@ -9,9 +10,15 @@ interface Props {
 }
 
 function EmblemContent({ header, body, className, width }: Props): JSX.Element {
+	const from = width === 'full' ? { opacity: 0, x: -100 } : { opacity: 0, y: 100 }
+	const to = width === 'full' ? { opacity: 1, x: 0 } : { opacity: 1, y: 0 }
 	return (
-		<section
-			className={`${className}maxWidth maxWidth min-h-[50vh] flex-center-center text-center`}
+		<motion.section
+			className={`${className}  maxWidth min-h-[50vh] flex-center-center text-center`}
+			initial={from}
+			whileInView={to}
+			viewport={{ once: true, amount: 0.25 }}
+			transition={{ duration: 1, ease: 'easeOut' }}
 		>
 			<div className='grid gap-y-8 place-items-center w-full h-full'>
 				<Emblem className='' />
@@ -23,7 +30,7 @@ function EmblemContent({ header, body, className, width }: Props): JSX.Element {
 				<p className={`${width === 'full' ? 'max-w-[85%]' : 'max-w-[30%] '}`}>{body}</p>
 				<Emblem className='' variant='inverted' />
 			</div>
-		</section>
+		</motion.section>
 	)
 }
 

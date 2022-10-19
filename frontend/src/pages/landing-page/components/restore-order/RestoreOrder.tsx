@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
+import { motion } from 'framer-motion'
 import reaper from 'assets/png/reaper-and-horse.png'
 import reaperShip from 'assets/png/reaper-ship.png'
 import Folklore from '../folklore/Folklore'
@@ -16,21 +17,33 @@ function RestoreOrder({ variant, className }: Props): JSX.Element {
 		>
 			<div
 				className={`bg-image h-screen ${
-					variant === 'folklore' ? 'pl-20 flex-center-between' : 'flex-center-center'
+					variant === 'folklore' ? 'p-20 flex-center-between' : 'flex-center-center'
 				}`}
 			>
 				{variant === 'folklore' ? (
 					<Folklore />
 				) : (
-					<div className='bg-image basis-[50%]'>
+					<motion.div
+						className='bg-image basis-[50%]'
+						initial={{ opacity: 0, x: -100 }}
+						whileInView={{ opacity: 1, x: 0 }}
+						viewport={{ once: true, amount: 0.25 }}
+						transition={{ duration: 1, ease: 'easeOut' }}
+					>
 						<img
 							src={variant === 'ship' ? reaperShip : reaper}
 							alt='reaper'
 							className={className}
 						/>
-					</div>
+					</motion.div>
 				)}
-				<div className='basis-[50%] pr-20'>
+				<motion.div
+					className='basis-[50%] pr-20'
+					initial={{ opacity: 0, x: 100 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					viewport={{ once: true, amount: 0.25 }}
+					transition={{ duration: 1, ease: 'easeOut' }}
+				>
 					<h2 className='text-4xl mb-8 w-[80%]'>
 						You are our last hope to restore the order of nature and life
 					</h2>
@@ -74,7 +87,7 @@ function RestoreOrder({ variant, className }: Props): JSX.Element {
 							what will become of them.
 						</p>
 					)}
-				</div>
+				</motion.div>
 			</div>
 		</section>
 	)
